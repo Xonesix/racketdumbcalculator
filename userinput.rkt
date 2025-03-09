@@ -4,3 +4,5 @@
     (define user-input (read-line))
     (displayln user-input)
 )
+
+(repl)

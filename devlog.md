@@ -17,3 +17,11 @@
 
 1. How to take input?
 2. How to read user input?
+
+## 5:50
+
+- well I figured out how to take input
+
+## The actions
+
+- I guess I'm going to take a string (prefix notation) and try to evaluate it with trusting input
