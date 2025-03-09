@@ -1,5 +1,18 @@
 #lang racket
 
+
+(define (ssplit str) 
+  (string-split str)
+)
+
+(define (evaluate-addition exp)
+    ; base case?
+    (cond
+        (string=? (car exp) "+")
+        ()
+    )
+)
+
 (define (repl)
     (display "> ")
     (define user-input (read-line))
@@ -12,4 +25,4 @@
     
 )
 
-(repl)
+(ssplit "+ 500 300")

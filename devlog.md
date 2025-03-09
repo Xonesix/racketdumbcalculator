@@ -42,3 +42,14 @@
 ## Future
 
 - After this feature is done I will attempt to replicate for all major operations. And then I will try to add a history feature, which will be tough but oh well
+
+# 6:33PM
+
+- After struggling with how I would design an algorithm, I ruminated for a bit and came to revelation.
+- I simply need to evaluate a prefix notation.
+- This is basically a leetcode problem
+- In imperative programming, we would use a stack, but since we're in a functional language, we can use a list and call on that recursively to sort of use with a stack, (basically using a list and cons and cadr as push and pop. now the evaluation has become trivial)
+
+## Work
+
+- now I will design an evaluation method to evaluate a prefix notation quite easily.
