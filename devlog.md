@@ -62,3 +62,28 @@
 # 7:11 PM
 
 - i think i got the main logic, down just working with some dumb type errors
+
+# 7:16PM
+
+- YES! I've gotten the evaluate expression to work. this can now evaluate any prefix notation.
+- now i can simply add this to the repl
+
+## Future work
+
+- I'm going to work on the history funciton, im thinking of mapping every string that starts with $ into it's original value
+
+# 7:21PM
+
+- defining some helper functions to clean input
+
+# 7:40
+
+- almost done just dealing with some issues
+- some type errors
+
+# 7:50
+
+## What's happening
+
+- I've given up on the cleaner functions and will just rely on doing it inside the evaluate function itself
+- it will be easier to debug anyways

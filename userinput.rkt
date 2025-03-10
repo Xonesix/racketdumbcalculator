@@ -1,6 +1,5 @@
 #lang racket
 
-
 (define (ssplit str) 
   (string-split str)
 )
@@ -8,7 +7,7 @@
 (define (evaluate exp stack)
     ; base case?
     (cond
-        [(empty? exp ) (car stack) ]
+        [ (empty? exp ) (car stack) ]
 
         ;addition
         [
@@ -31,22 +30,35 @@
             ( evaluate (cdr exp) (cons (* (car stack) (cadr stack) ) (cddr stack)) )
         ]
         ; (char=? (car (string->list)) #/$) ;history features
-        (else (evaluate (cdr exp) (cons (car exp) stack)) )
+        [else (evaluate (cdr exp) (cons (string->number (car exp)) stack))]
 
     )
 )
 
-;;; (define (repl)
-;;;     (display "> ")
-;;;     (define user-input (read-line))
-;;;     (define expression (reverse (ssplit user-input)))
-;;;     (displayln (evaluate expression '()) )
-;;;     (if (string=? user-input "exit") 
-;;;     ; then
-;;;     (exit)
-;;;     ;else 
-;;;     (repl) )
-    
-;;; )
 
-(evaluate '("+" "500" "300") '())
+(define (repl history index) 
+    (display "> ")
+    (define user-input (read-line))
+
+
+    (define expression (reverse (ssplit user-input)))
+
+
+    (define result (evaluate expression '()) )
+    (display "$")
+    (display index)
+    (display "  | ANSWER: ")
+    (displayln result)
+    (display "CURRENT HISTORY: ")
+    (display history)
+    
+    (if (string=? user-input "exit") 
+    ; then
+    (exit)
+    ;else 
+    (repl (append history (list result)) (+ 1 index) ) )
+    
+)
+
+; (evaluate (reverse '("-" "+" "+" "+" "5" "3" "6" "7" "10")) '())
+(repl '() 1)
