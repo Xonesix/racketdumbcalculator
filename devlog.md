@@ -76,28 +76,28 @@
 
 - defining some helper functions to clean input
 
-# 7:40
+# 7:40PM
 
 - almost done just dealing with some issues
 - some type errors
 
-# 7:50
+# 7:50PM
 
 ## What's happening
 
 - I've given up on the cleaner functions and will just rely on doing it inside the evaluate function itself
 - it will be easier to debug anyways
 
-# 8:03
+# 8:03PM
 
 - History feature is almost done
 - now just need to replace the values in the expression with history values
 
-# 8:12
+# 8:12PM
 
 - history feature working, now need to read $ characters
 
-# 8:25
+# 8:25PM
 
 - The history feature is complete, now I need to re-read the rubric and check if there are any missing requirements
 
@@ -109,9 +109,15 @@
 2. Format History with <histId> : <result> (i'm going to put a dollar sign there just incase)
 3. General error for evaluate func
 
-# 8:42
+# 8:42PM
 
 - Well that's almost it
 - I finished floating point
 - I finished general error function
 - All that's left is the history formatting
+
+# 8:44PM
+
+- Well yeah i pretty much finished, I don't think anything is left.
+- Overall a pretty intense coding project.
+  There were definetly times where I was frustrated and confused at how would I finish this, but the work is done.

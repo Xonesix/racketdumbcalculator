@@ -59,9 +59,9 @@
                        (real->double-flonum (evaluate expression '() history)))])
         
         (unless (eq? result 'error)  
-          (display "HistoryVal: $")
+          (display "$")
           (display index)
-          (display "  | ANSWER: ")
+          (display " : ")
           (displayln result))
         
         (repl (if (eq? result 'error) 
