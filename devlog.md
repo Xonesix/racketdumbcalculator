@@ -53,3 +53,12 @@
 ## Work
 
 - now I will design an evaluation method to evaluate a prefix notation quite easily.
+- using stack method
+
+## While Working (6:52 PM)
+
+- yeah just working, i got the base case to be returning basically the stack, and some other stuff
+
+# 7:11 PM
+
+- i think i got the main logic, down just working with some dumb type errors
