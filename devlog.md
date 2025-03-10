@@ -87,3 +87,12 @@
 
 - I've given up on the cleaner functions and will just rely on doing it inside the evaluate function itself
 - it will be easier to debug anyways
+
+# 8:03
+
+- History feature is almost done
+- now just need to replace the values in the expression with history values
+
+# 8:12
+
+- history feature working, now need to read $ characters
