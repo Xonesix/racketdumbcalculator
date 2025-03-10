@@ -96,3 +96,7 @@
 # 8:12
 
 - history feature working, now need to read $ characters
+
+# 8:25
+
+- The history feature is complete, now I need to re-read the rubric and check if there are any missing requirements
