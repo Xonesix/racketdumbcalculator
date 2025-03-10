@@ -100,3 +100,11 @@
 # 8:25
 
 - The history feature is complete, now I need to re-read the rubric and check if there are any missing requirements
+
+## What's Missing
+
+- There are a couple of things missing that should be fairly easy to fix
+
+1. Make sure numbers are using floating point
+2. Format History with <histId> : <result> (i'm going to put a dollar sign there just incase)
+3. General error for evaluate func
