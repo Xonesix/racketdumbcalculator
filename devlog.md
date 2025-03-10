@@ -108,3 +108,10 @@
 1. Make sure numbers are using floating point
 2. Format History with <histId> : <result> (i'm going to put a dollar sign there just incase)
 3. General error for evaluate func
+
+# 8:42
+
+- Well that's almost it
+- I finished floating point
+- I finished general error function
+- All that's left is the history formatting
