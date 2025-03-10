@@ -121,3 +121,17 @@
 - Well yeah i pretty much finished, I don't think anything is left.
 - Overall a pretty intense coding project.
   There were definetly times where I was frustrated and confused at how would I finish this, but the work is done.
+
+# 8:48
+
+- Well.. I was reading through the project and found out that there is no subtraction notation.....
+- And i need to implement negative notation
+- ehhh, i'm gonna call it a day
+- I'll fix it tomorrow
+
+## The Plan
+
+- Remove notation of the subtraction
+- Create helper function to be similar to evaluating $2 to instead multiplying the number by negative one when found
+- yeah that's it
+- should be esy but i'm too lazy to do it now
