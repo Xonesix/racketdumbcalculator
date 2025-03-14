@@ -135,3 +135,12 @@
 - Create helper function to be similar to evaluating $2 to instead multiplying the number by negative one when found
 - yeah that's it
 - should be esy but i'm too lazy to do it now
+
+# March 14th 6:56PM
+
+- Yeah I switched up the functionality so it includes negative numbers
+- I finished it, now just implement batch mode and then submit
+
+## Future Work
+
+- batch mode

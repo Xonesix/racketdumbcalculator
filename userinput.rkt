@@ -14,11 +14,6 @@
             ( string=? (car exp) "+" )
             ( evaluate (cdr exp) (cons (+ (car stack) (cadr stack) ) (cddr stack)) history)
         ]
-        ;subtraction
-        [
-            ( string=? (car exp) "-" )
-            ( evaluate (cdr exp) (cons (- (car stack) (cadr stack) ) (cddr stack)) history)
-        ]
         ; division
         [
             ( string=? (car exp) "/" )
@@ -29,15 +24,29 @@
             ( string=? (car exp) "*" )
             ( evaluate (cdr exp) (cons (* (car stack) (cadr stack) ) (cddr stack)) history)
         ]
-         [ 
+        
+        [ 
             (char=? (car (string->list (car exp ))) #\$) 
             (evaluate (cdr exp) (cons (hist-find (car exp) history) stack) history)
 
-        ] ;history features
+        ] 
+        
+         ; handle "-" by multiplying the next number by -1
+        [ 
+            (char=? (car (string->list (car exp))) #\-)
+            (evaluate (cdr exp) (cons (real->double-flonum (toNegative (car exp))) stack) history)
+        ]
+
+        
+        ;history features
         [else (evaluate (cdr exp) (cons (real->double-flonum (string->number (car exp))) stack) history)]
+        
 
     )
 )
+(define (toNegative str)
+  (define num (string->number (list->string (cdr (string->list str)))))
+  (* -1 num))  ; Return the negated number
 
 (define (hist-find str history)
     (define strIndex ( list->string (cdr (string->list str)) ) )
