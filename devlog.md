@@ -156,3 +156,13 @@
 - batch mode wasn't too hard as it's just interactive mode except it only outputs results
 - the hardest part was basically reading through documentation and figuring out how to read args
 - otherwise i just copied the repl function into batch mode and removed the history displayln statements
+
+## Thoughts on this project as a whole
+
+- definetly one of the harder projects, not many resources about racket except the documentation itself
+- the hardest part was probably trying to grasp the concept of programming in a functional language itself it's quite different from imperative languages
+- my only complaint with racket and otherfunctional languages is filtering through and reading through the parenthesis to get to the part of code you want, while in imperative language it's just line by line statements that are pretty easy to sift through.
+
+# March 14th 7:23PM
+
+- Forgot to include divide by zero error, pretty easy fix but yeah proect finished

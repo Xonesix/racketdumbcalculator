@@ -15,9 +15,11 @@
             ( evaluate (cdr exp) (cons (+ (car stack) (cadr stack) ) (cddr stack)) history)
         ]
         ; division
-        [
-            ( string=? (car exp) "/" )
-            ( evaluate (cdr exp) (cons (/ (car stack) (cadr stack) ) (cddr stack)) history)
+        [ 
+            (string=? (car exp) "/" )
+          (if (= (cadr stack) 0)
+              (error "Division by zero error")
+              (evaluate (cdr exp) (cons (/ (car stack) (cadr stack)) (cddr stack)) history))
         ]
         ; multiplication
         [
