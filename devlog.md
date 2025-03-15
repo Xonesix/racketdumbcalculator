@@ -141,6 +141,18 @@
 - Yeah I switched up the functionality so it includes negative numbers
 - I finished it, now just implement batch mode and then submit
 
+## Thoughts
+
+- I guess it's kind of confusing to work with arguments in racket so I will have to see how that works but I think I will figure it out
+
 ## Future Work
 
 - batch mode
+
+# March 14th 7:15PM
+
+## Thougths
+
+- batch mode wasn't too hard as it's just interactive mode except it only outputs results
+- the hardest part was basically reading through documentation and figuring out how to read args
+- otherwise i just copied the repl function into batch mode and removed the history displayln statements

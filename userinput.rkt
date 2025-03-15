@@ -54,6 +54,27 @@
     (real->double-flonum (list-ref history index) )
 )
 
+(define (batch-mode history index)
+  (define user-input (read-line))
+  (if (eof-object? user-input)
+      (void)
+      (let* ([expression (reverse (ssplit user-input))]
+             [result (with-handlers ([exn:fail? 
+                                       (lambda (e)
+                                         (displayln "An error occurred during evaluation.")
+                                         'error)])
+                       (real->double-flonum (evaluate expression '() history)))])
+        
+        (unless (eq? result 'error)
+          (displayln result))
+        
+        (batch-mode (if (eq? result 'error)
+                        history
+                        (append history (list result)))
+                    (if (eq? result 'error)
+                        index
+                        (+ 1 index))))))
+
 (define (repl history index) 
   (display "> ")
   (define user-input (read-line))
@@ -81,5 +102,11 @@
                   (+ 1 index))))))
 
 
-; (evaluate (reverse '("-" "+" "+" "+" "5" "3" "6" "7" "10")) '())
-(repl '() 0)
+(define (main)
+  (define args (vector->list (current-command-line-arguments)))
+  (if (or (member "-b" args) (member "--batch" args))
+      (batch-mode '() 0)
+      (repl '() 0)))
+
+(main)
+
