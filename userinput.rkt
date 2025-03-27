@@ -58,7 +58,7 @@
 
 (define (batch-mode history index)
   (define user-input (read-line))
-  (if (eof-object? user-input)
+  (if (or (eof-object? user-input) (string=? user-input "quit"))
       (void)
       (let* ([expression (reverse (ssplit user-input))]
              [result (with-handlers ([exn:fail? 
@@ -76,6 +76,7 @@
                     (if (eq? result 'error)
                         index
                         (+ 1 index))))))
+
 
 (define (repl history index) 
   (display "> ")

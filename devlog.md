@@ -171,3 +171,7 @@
 
 - apparently the input has to be exactly "quit" for the program to exit and not "exit"
 - fixing now
+
+## 12:20PM
+
+- forgot to add quit to batch mode
