@@ -166,3 +166,8 @@
 # March 14th 7:23PM
 
 - Forgot to include divide by zero error, pretty easy fix but yeah proect finished
+
+# March 27th 12:12PM
+
+- apparently the input has to be exactly "quit" for the program to exit and not "exit"
+- fixing now

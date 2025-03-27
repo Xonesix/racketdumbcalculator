@@ -81,7 +81,7 @@
   (display "> ")
   (define user-input (read-line))
 
-  (if (string=? user-input "exit") 
+  (if (string=? user-input "quit") 
       (exit)
       (let* ([expression (reverse (ssplit user-input))]
              [result (with-handlers ([exn:fail? 
